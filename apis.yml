@@ -1,23 +1,57 @@
 aid: promptrefine
+
 name: Prompt Refine
+
 description: 'Prompt Refine is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
   and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/promptrefine/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-25'
+
 modified: '2026-10-25'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/promptrefine-hosts.yml
+- type: Vendors
+  url: vendors/promptrefine-vendors.yml
+- type: DomainSecurity
+  url: security/promptrefine-domain-security.yml
 - type: Website
   url: https://promptrefine.com/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's website returns a 503 Service Suspended page, preventing access to any machine‑readable API specification.
+  evidence:
+    - url: https://www.promptrefine.com/
+      status: 503
+  checked: '2026-10-25'
+x-enrichment:
+  date: '2026-10-25'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

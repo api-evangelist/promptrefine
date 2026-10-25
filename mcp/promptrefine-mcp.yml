@@ -1,0 +1,7 @@
+generated: "2026-10-25"
+method: none
+source: "Checked website, no MCP documented"
+deployment:
+  mode: none
+  auth: none
+  verified: derived
